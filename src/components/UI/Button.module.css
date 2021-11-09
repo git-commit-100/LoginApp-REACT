@@ -1,0 +1,25 @@
+.btn {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #4b0082;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn[disabled]{
+  opacity: .7;
+  cursor: auto;
+  background-color: gray;
+}
+
+.btn[disabled]:hover{
+  background-color: gray;
+}

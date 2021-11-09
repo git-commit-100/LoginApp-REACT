@@ -1,0 +1,39 @@
+.nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  grid-column-gap: 0.5rem;
+}
+
+.nav-item {
+  align-self: center;
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.nav-item-1 {
+  grid-column: 1 / 2;
+}
+
+.nav-item-2 {
+  grid-column: 2 / 3;
+}
+
+.logout-btn {
+  grid-column: 3 / 4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  background-color: orchid;
+}
+
+.logout-btn:hover {
+  background-color: #ff69b4;
+}
