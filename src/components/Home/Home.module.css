@@ -1,4 +1,11 @@
-.heading{
+.home{
     text-align: center;
+}
+
+.heading{
     margin: 1rem auto;
+}
+
+.home-logout{
+    padding: .25rem 3rem;
 }

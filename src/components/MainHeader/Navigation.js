@@ -1,17 +1,23 @@
+import { useContext } from "react";
+import AuthContext from "../../context/auth-context";
 import styles from "./Navigation.module.css";
 
-const Navigation = (props) => {
+const Navigation = () => {
+  const authCtx = useContext(AuthContext);
   return (
     <nav style={{ marginRight: "1rem" }}>
-      {props.onLogin && (
+      {authCtx.isLoggedIn && (
         <ul className={styles["nav-list"]}>
           <li className={`${styles["nav-item"]} ${styles["nav-item-1"]}`}>
-            About
+            Users
           </li>
           <li className={`${styles["nav-item"]} ${styles["nav-item-2"]}`}>
-            Contact
+            Admin
           </li>
-          <li className={`${styles["nav-item"]} ${styles["logout-btn"]}`} onClick={props.onLogout}>
+          <li
+            className={`${styles["nav-item"]} ${styles["logout-btn"]}`}
+            onClick={authCtx.onLogout}
+          >
             Logout
           </li>
         </ul>
