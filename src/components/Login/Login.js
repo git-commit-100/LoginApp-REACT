@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import { useContext, useEffect, useReducer, useState } from "react";
 import AuthContext from "../../context/auth-context";
+import Input from "../UI/Input";
 
 function emailReducer(state, action) {
   //action 1
@@ -109,25 +110,18 @@ const Login = (props) => {
     <Card>
       <h3 className={styles["heading"]}>Login In Your Account Here</h3>
       <form className={styles["login-form"]} onSubmit={submitHandler}>
-        <label className={styles["input-email-label"]}>Enter Your Email</label>
-        <input
+        <Input
+          label="Enter Your Email"
           type="email"
-          autoComplete="nope"
-          className={`${styles["form-control"]} ${
-            emailState.isValid === false ? styles["invalid"] : ""
-          }`}
+          isValid={emailIsValid}
           onChange={emailChangeHandler}
           onBlur={validateEmailHandler}
           value={emailState.value}
         />
-        <label className={styles["input-password-label"]}>
-          Enter Your Password
-        </label>
-        <input
+        <Input
+          label="Enter Your Password"
           type="password"
-          className={`${styles["form-control"]} ${
-            passwordState.isValid === false ? styles["invalid"] : ""
-          }`}
+          isValid={passwordIsValid}
           onChange={passwordChangeHandler}
           onBlur={validatePasswordHandler}
           value={passwordState.value}

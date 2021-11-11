@@ -11,26 +11,6 @@
   font-size: 28px;
 }
 
-.form-control {
-  grid-column: 2 / 4;
-}
-
-.form-control:focus{
-  background-color: white;
-  border: 2px solid #4b0082;
-}
-
 .submit-btn {
   grid-column: 2 / 3;
-}
-
-input {
-  outline: none;
-  font-size: 18px;
-  padding: 0.25rem 1rem;
-}
-
-input.invalid {
-  border: 2px solid #c41e3a;
-  background-color: #faa0a0;
 }
